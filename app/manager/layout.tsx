@@ -213,7 +213,11 @@ export default function ManagerLayout({ children }: { children: React.ReactNode 
             <span className="text-sm text-gray-500">Welcome, {user.username}</span>
           </div>
         </header>
+<<<<<<< HEAD
         <main className="p-6">
+=======
+        {/* <main className="p-6">
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
           <Tabs value={tab} onValueChange={setTab}>
             <TabsContent value="dashboard">
               <ManagerDashboard />
@@ -234,7 +238,11 @@ export default function ManagerLayout({ children }: { children: React.ReactNode 
               <ManagerReports />
             </TabsContent>
           </Tabs>
+<<<<<<< HEAD
         </main>
+=======
+        </main> */}
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
       </div>
     </div>
   )

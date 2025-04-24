@@ -1,5 +1,6 @@
 // API utility functions
 const API_BASE_URL = "/api"
+<<<<<<< HEAD
 // lib/api.js
 
 const dbConfig = {
@@ -11,6 +12,9 @@ const dbConfig = {
   connectionLimit: 10,
   queueLimit: 0
 };
+=======
+
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
 // Auth functions
 export async function loginUser(username: string, password: string, role: string) {
   try {

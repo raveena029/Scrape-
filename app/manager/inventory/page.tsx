@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // "use client"
 
 // import { useState, useEffect } from "react"
@@ -250,6 +251,8 @@
 //     </Card>
 //   )
 // }
+=======
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
 "use client"
 
 import { useState, useEffect } from "react"
@@ -301,6 +304,10 @@ export default function ManagerInventory() {
         setInventory(data)
         setFilteredInventory(data)
       } else {
+<<<<<<< HEAD
+=======
+        console.error("Invalid inventory data format:", data)
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
         toast({
           title: "Error",
           description: "Failed to fetch inventory. Invalid data format.",
@@ -310,6 +317,10 @@ export default function ManagerInventory() {
         setFilteredInventory([])
       }
     } catch (error) {
+<<<<<<< HEAD
+=======
+      console.error("Error fetching inventory:", error)
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
       toast({
         title: "Error",
         description: "Failed to fetch inventory. Please try again.",
@@ -354,6 +365,10 @@ export default function ManagerInventory() {
 
       setIsDialogOpen(false)
     } catch (error) {
+<<<<<<< HEAD
+=======
+      console.error("Error updating inventory:", error)
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
       toast({
         title: "Error",
         description: "Failed to update inventory. Please try again.",
@@ -365,6 +380,7 @@ export default function ManagerInventory() {
   }
 
   const handleUpdateClick = (item: any) => {
+<<<<<<< HEAD
     setSelectedItem(item)
     setNewQuantity(item.currentQuantity?.toString() || "")
     setIsDialogOpen(true)
@@ -381,6 +397,26 @@ export default function ManagerInventory() {
       return { text: "Low Stock", class: "bg-yellow-50 text-yellow-700 border-yellow-200" }
     }
     return { text: "In Stock", class: "bg-green-50 text-green-700 border-green-200" }
+=======
+    if (!item) {
+      console.error("Attempted to update undefined item")
+      toast({
+        title: "Error",
+        description: "Invalid item selected.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    setSelectedItem(item)
+
+    // Safely convert currentQuantity to string with fallback to "0"
+    const quantityStr =
+      item.currentQuantity !== undefined && item.currentQuantity !== null ? item.currentQuantity.toString() : "0"
+
+    setNewQuantity(quantityStr)
+    setIsDialogOpen(true)
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
   }
 
   return (
@@ -461,6 +497,10 @@ export default function ManagerInventory() {
                   <div className="font-medium">{selectedItem.productName || "Unknown Product"}</div>
                   <div className="text-sm text-gray-500">Product ID: {selectedItem.productId || "N/A"}</div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
                 <div className="space-y-2">
                   <Label htmlFor="current-quantity">Current Quantity</Label>
                   <Input
@@ -469,6 +509,10 @@ export default function ManagerInventory() {
                     disabled
                   />
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
                 <div className="space-y-2">
                   <Label htmlFor="new-quantity">New Quantity</Label>
                   <Input
@@ -494,4 +538,8 @@ export default function ManagerInventory() {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2b06a6e27269c71c63208dd4f48f72b82e9391b2
